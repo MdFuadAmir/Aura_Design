@@ -23,6 +23,9 @@ import AddBlogs from "../Pages/Dashboard/AddBlogs";
 import AddProject from "../Pages/Dashboard/AddProject";
 import ManagePricing from "../Pages/Dashboard/ManagePricing";
 import Inquires from "../Pages/Dashboard/Inquires";
+import NotFound from "../Pages/Error/NotFound";
+import ProjectNotFound from "../Pages/Error/ProjectNotFound";
+import BlogNotFound from "../Pages/Error/BlogNotFound";
 
 const router = createBrowserRouter([
   {
@@ -64,6 +67,18 @@ const router = createBrowserRouter([
       {
         path: "/submit-review",
         element: <Review />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
+      },
+      {
+        path: "*",
+        element: <ProjectNotFound />,
+      },
+      {
+        path: "*",
+        element: <BlogNotFound />,
       },
     ],
   },

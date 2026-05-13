@@ -14,6 +14,7 @@ import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import ComponentLoader from "../../Shared/ComponentLoader";
 import CommonButton from "../../Shared/CommonButton";
 import SEO from "../../Utils/SEO";
+import ProjectNotFound from "../Error/ProjectNotFound";
 
 const ProjectDetails = () => {
   const { id } = useParams();
@@ -34,9 +35,7 @@ const ProjectDetails = () => {
   if (isLoading) return <ComponentLoader />;
   if (isError)
     return (
-      <div className="text-center py-20 text-red-500 font-bold">
-        Project Not Found!
-      </div>
+      <ProjectNotFound />
     );
 
   const {

@@ -5,6 +5,7 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { motion } from "framer-motion";
 import ComponentLoader from "../../Shared/ComponentLoader";
 import SEO from "../../Utils/SEO";
+import BlogNotFound from "../Error/BlogNotFound";
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -28,7 +29,7 @@ const BlogDetails = () => {
 
   if (!blog)
     return (
-      <div className="text-center py-20 dark:text-white">Blog not found!</div>
+      <BlogNotFound/>
     );
 
   return (
