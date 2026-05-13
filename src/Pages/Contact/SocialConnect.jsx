@@ -66,7 +66,7 @@ const SocialConnect = () => {
     <section className="py-24 bg-[#f2f9f5] dark:bg-[#04120c] transition-colors duration-500 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Header */}
-        <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div className="max-w-2xl">
             <span className="text-emerald-500 font-black text-[10px] uppercase tracking-[0.5em] mb-4 block">
               The Network
@@ -93,12 +93,12 @@ const SocialConnect = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative p-8 bg-white dark:bg-[#061a12] rounded-4xl border border-emerald-500/5 hover:border-emerald-500/20 transition-all duration-500 flex items-center justify-between overflow-hidden"
+              className="group relative p-8 bg-white dark:bg-[#061a12] rounded-4xl border border-emerald-500/5 hover:border-emerald-500/20 transition-all duration-500 overflow-hidden flex items-center justify-between "
             >
               {/* Background Glow Effect on Hover */}
               <div className="absolute inset-0 bg-emerald-500/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
 
-              <div className="relative z-10 flex items-center gap-5">
+              <div className="relative z-10 flex items-center  gap-5">
                 <div className="w-14 h-14 rounded-2xl bg-gray-50 dark:bg-[#0a2318] flex items-center justify-center text-2xl text-[#1a1a1a] dark:text-white group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm">
                   {social.icon}
                 </div>

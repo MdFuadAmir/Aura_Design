@@ -10,6 +10,7 @@ import {
 import { useQuery } from "@tanstack/react-query";
 import CommonButton from "../../Shared/CommonButton";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import ComponentLoader from "../../Shared/ComponentLoader";
 
 const Testimonials = () => {
   const [index, setIndex] = useState(0);
@@ -28,12 +29,7 @@ const Testimonials = () => {
   const prev = () =>
     setIndex((prev) => (prev - 1 + allReviews.length) % allReviews.length);
 
-  if (isLoading)
-    return (
-      <div className="py-20 text-center text-emerald-500 font-bold">
-        Loading Testimonials...
-      </div>
-    );
+  if (isLoading) return <ComponentLoader />;
   if (allReviews.length === 0) return null;
 
   const currentReview = allReviews[index];

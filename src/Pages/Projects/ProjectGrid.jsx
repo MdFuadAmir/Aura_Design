@@ -23,7 +23,7 @@ const ProjectGrid = () => {
 
   if (isLoading)
     return (
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center bg-[#f2f9f5] dark:bg-[#04120c]">
         <div className="relative flex items-center justify-center">
           <motion.div
             animate={{ rotate: 360 }}
